@@ -1,0 +1,28 @@
+{
+  "name": "test-01",
+  "version": "1.0.0",
+  "description": "test no 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "hasbi",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "next": "^10.0.8",
+    "next-images": "^1.7.0",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.5.1",
+    "react-dom": "^17.0.1",
+    "save": "^2.4.0",
+    "scss": "^0.2.4"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "url-loader": "^4.1.1"
+  }
+}
