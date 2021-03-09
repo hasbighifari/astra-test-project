@@ -101,7 +101,7 @@ const Dashboard = ({ ...props }) => {
             })
         }
         else {
-            await updateTodoItem({ todoItem: todo.todoItem, id: todo.id })
+            await updateTodoItem({ todoItem: todo.todoItem, id: todo._id })
             const result = await getTodoItem()
             setTodos(result)
             setState({

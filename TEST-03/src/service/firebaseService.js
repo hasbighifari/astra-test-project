@@ -14,7 +14,7 @@ export const addTodoItem = (addTodo) => {
                         .setUser({ "email": "hasbighifarial@gmail.com." })
                         .setLevel("Error")
                 );
-                reject(error)
+                // reject(error)
                 return Sentry.captureException(error);
             }
             else {
@@ -44,7 +44,7 @@ export const getTodoItem = () => {
                     .setUser({ "email": "hasbighifarial@gmail.com." })
                     .setLevel("Error")
             );
-            reject(error)
+            // reject(error)
             return Sentry.captureException(error);
         })
     })
@@ -64,7 +64,7 @@ export const deleteTodoItem = (todo) => {
                         .setUser({ "email": "hasbighifarial@gmail.com." })
                         .setLevel("Error")
                 );
-                reject(error)
+                // reject(error)
                 return Sentry.captureException(error);
             })
     })
@@ -84,7 +84,7 @@ export const updateTodoItem = (todo) => {
                         .setUser({ "email": "hasbighifarial@gmail.com." })
                         .setLevel("Error")
                 );
-                reject(error)
+                // reject(error)
                 return Sentry.captureException(error);
             })
     })
