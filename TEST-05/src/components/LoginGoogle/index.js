@@ -29,10 +29,10 @@ function LoginHooks() {
     });
 
     return (
-        <Button onClick={signIn} variant="contained" size="large" style={{ width: "100%", backgroundColor: "#FFFFFF", fontWeight: "bold" }}>
-            {/* <img src="icons/google.svg" alt="google login" style={{ display: "flex" }}></img> */}
-                Sign in with Google
-        </Button>
+        <Button onClick={signIn} variant="contained" size="large" style={{ width: "100%", backgroundColor: "#FFFFFF", fontWeight: "bold", marginBottom: 10 }}>
+            <img src="google.svg" alt="google login" style={{ width: 30, height: 30 }}></img>
+            <span style={{ paddingLeft: 20 }} > Sign in with Google</span>
+        </Button >
     );
 }
 
