@@ -20,7 +20,7 @@ const AppBars = ({ ...props }) => {
                     <Typography variant="h6" className={classes.title}>
                         {props.name}
                     </Typography>
-                    <Button color="inherit" onClick={props.handleLogout}>Logout</Button>
+                    {/* <Button color="inherit" onClick={props.handleLogout}>Logout</Button> */}
                 </Toolbar>
             </AppBar>
         </div>

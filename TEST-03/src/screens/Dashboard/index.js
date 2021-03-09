@@ -12,14 +12,11 @@ import { addTodoItem, getTodoItem, deleteTodoItem, updateTodoItem } from '../../
 import { connect } from 'react-redux'
 
 const mapStateToProps = state => ({
-    user: state.user,
     system: state.system
 })
 
 const mapDispatchToProps = dispatch => ({
-    // _setLoginStatus: val => {
-    //     dispatch(loginStatus(val))
-    // }
+    
 })
 
 
@@ -63,12 +60,6 @@ const Dashboard = ({ ...props }) => {
             openAdd: open,
             openEdit: open,
         })
-    }
-    const handleLogout = () => {
-        // SendToService({}, 'POST', 'logout', response => {
-        //     localStorage.setItem('x-auth-token', '')
-        //     _setLoginStatus(false)
-        // })
     }
     const handleChange = id => e => {
         setTodo({
@@ -119,26 +110,6 @@ const Dashboard = ({ ...props }) => {
             })
         }
     }
-    const handleSearch = id => e => {
-        setTodo({
-            ...todo,
-            [id]: e.target.value,
-        })
-    }
-    const handleSubmitSearch = () => {
-        if (todo.filter === null || todo.filter === undefined) {
-            todo.filter = ''
-        }
-        else {
-            if (todo.filter === 'done') todo.filter = true
-            else if (todo.filter === 'undone') todo.filter = false
-            else todo.filter = ''
-        }
-        // SendToService({ q: todo.q || '', filter: todo.filter }, 'GET', 'searchTodo', response => {
-        //     setTodos(response.body)
-        // })
-    }
-    console.log(state.openEdit)
     return (
         <div>
             <Dialog open={state.openAdd} title={'Add todo item'} buttonTitle='Add Item' handleClose={handleCloseDialog} handleSubmit={handleAddTodoItem}>
@@ -148,7 +119,7 @@ const Dashboard = ({ ...props }) => {
                 handleClose={handleCloseDialog} handleSubmit={handleEditTodoItem} >
                 <TextField label='Todo Item' fullWidth value={todo.todoItem} onChange={handleChange('todoItem')} />
             </Dialog>
-            <Appbar name={'Todo List'} handleLogout={handleLogout} />
+            <Appbar name={'Todo List'} />
             {system.serviceStart ? <Loader /> : ''}
             <Grid container className={classes.root1}>
                 {/* <Grid item lg={4}>
