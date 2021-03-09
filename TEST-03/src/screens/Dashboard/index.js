@@ -83,10 +83,6 @@ const Dashboard = ({ ...props }) => {
         const result = await getTodoItem()
         setTodos(result)
         setTodo({})
-        // SendToService({ ...item }, 'Delete', 'deleteTodo', response => {
-        //     setTodos(response.body)
-        //     setTodo({})
-        // })
     }
 
     const handleEditTodoItem = async (type, item) => {
