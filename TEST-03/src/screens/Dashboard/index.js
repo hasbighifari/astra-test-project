@@ -118,44 +118,6 @@ const Dashboard = ({ ...props }) => {
             <Appbar name={'Todo List'} />
             {system.serviceStart ? <Loader /> : ''}
             <Grid container className={classes.root1}>
-                {/* <Grid item lg={4}>
-                    <TextField
-                        id='q'
-                        label='Search'
-                        fullWidth
-                        onChange={handleSearch('q')}
-                        InputLabelProps={{
-                            shrink: true
-                        }}
-                    />
-                </Grid>
-                <Grid item lg={4} style={{ paddingLeft: 20 }}>
-                    <TextField
-                        id='q'
-                        label='Filters'
-                        select
-                        fullWidth
-                        onChange={handleSearch('filter')}
-                        SelectProps={{
-                            native: true,
-                        }}
-                        InputLabelProps={{
-                            shrink: true
-                        }}
-                    >
-                        {filters.map((item, index) => (
-                            <option key={index} value={item}>
-                                {item}
-                            </option>
-                        ))}
-                    </TextField>
-                </Grid>
-                <Grid item lg={4} style={{ paddingLeft: 20 }}>
-                    <Button variant='contained' color='primary' onClick={handleSubmitSearch}>
-                        Search
-                            </Button>
-                </Grid> */}
-
                 <Grid item lg={12} style={{ marginTop: 20 }}>
                     <div className={classes.todoList}>
                         {todos.map((item, index) => (
