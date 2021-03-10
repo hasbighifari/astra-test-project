@@ -16,13 +16,14 @@ const Login = (props) => {
         })
     }
     const handleLogin = () => {
+        console.log("wkkwkw")
         let request = {
             email: state.email,
             password: state.password
         }
         SendToService(request, 'POST', 'login', response => {
-            let token = response.headers['x-auth-token']
-            localStorage.setItem('x-auth-token', token)
+            // let token = response.headers['x-auth-token']
+            // localStorage.setItem('x-auth-token', token)
             // _setLoginStatus(true)
             props.history.push('/')
         })
@@ -44,21 +45,21 @@ const Login = (props) => {
             <Container>
                 <Row className="justify-content-md-center">
                     <Col lg={6}>
-                        <div style={{ marginTop: 150 }}>
+                        <div style={{ marginTop: 100 }}>
                             <Card style={{ padding: 30, backgroundColor: "#121013" }}>
                                 <h4 style={{ fontFamily: "sans-serif", fontSize: 30, paddingBottom: 10, color: "white" }}>Sign In</h4>
                                 <Form>
-                                    <Form.Group controlId="formBasicEmail">
+                                    <Form.Group>
                                         <Form.Label style={{ color: "white" }}>Email address</Form.Label>
-                                        <Form.Control id="email" type="email" placeholder="Enter email" onChange={handleChange} />
+                                        <Form.Control id="email" type="email" placeholder="Enter email" onChange={handleChange("email")} />
                                         {/* <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
                     </Form.Text> */}
                                     </Form.Group>
 
-                                    <Form.Group controlId="formBasicPassword">
+                                    <Form.Group>
                                         <Form.Label style={{ color: "white" }}>Password</Form.Label>
-                                        <Form.Control id="password" type="password" placeholder="Password" onChange={handleChange} />
+                                        <Form.Control id="password" type="password" placeholder="Password" onChange={handleChange("password")} />
                                     </Form.Group>
                                     {/* <Form.Group controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
